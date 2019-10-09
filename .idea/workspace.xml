@@ -33,6 +33,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yams\Desktop\Portfolio\mayaprebish\src" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -55,7 +60,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570582897354</updated>
-      <workItem from="1570582899487" duration="1843000" />
+      <workItem from="1570582899487" duration="4725000" />
     </task>
     <servers />
   </component>
