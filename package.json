@@ -2,7 +2,7 @@
   "name": "mayaprebish",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mayaprebish.github.io",
+  "homepage": "http://mayaprebish.github.io/index",
   "dependencies": {
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
