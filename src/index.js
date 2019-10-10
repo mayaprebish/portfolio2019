@@ -16,7 +16,7 @@ class App extends React.Component {
             <div>
                 <Header/>
 
-                <Route exact path='/' component={Portfolio} id='nav-portfolio'/>
+                <Route exact path='/' component={Resume} id='nav-resume'/>
                 <Route path='/portfolio' component={Portfolio} id='nav-portfolio'/>
                 <Route path='/about' component={About} id='nav-about'/>
                 <Route path='/contact' component={Contact} id='nav-contact'/>
@@ -69,7 +69,17 @@ class Resume extends React.Component {
 
     render() {
         return <div className="container">
-            <h1>resume</h1>
+            <a target="_blank"
+               href="https://docs.google.com/document/d/1NQcSp1peqMEnJ2zk0xbswHT1uhnCitKlUpvXvwyN304/edit?usp=sharing">
+                <button className="btn btn-dark">View on Google Drive</button>
+            </a>
+
+            <div className="container-fluid">
+                <img
+                    src="https://live.staticflickr.com/65535/48873516518_017d939083_o.jpg"
+                    width="80%"
+                    alt="Maya Prebish - Resume"/>
+            </div>
         </div>
     }
 }
