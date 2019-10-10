@@ -80,8 +80,17 @@ class Header extends React.Component {
     }
 
     render() {
-        return <div className="container-fluid">
-            <h1>bitch this is the header</h1>
+        return <div className="container-fluid header">
+            <h1>Maya Prebish</h1>
+            <p>
+                I am a second year CS student at Northeastern University's Khoury College of Computer Sciences,
+                looking to expand my knowledge of
+                the field and gain experience, especially in software engineering and web development.
+            </p>
+
+            <p>
+                Please note this site is a work in progress as of October 2019.
+            </p>
 
             <Link to='/about'>about</Link>
             <Link to='/contact'>contact</Link>
