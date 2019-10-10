@@ -16,9 +16,9 @@ class App extends React.Component {
             <div>
                 <Header/>
 
-                <Route exact path='/' component={About} id='nav-about'/>
-                <Route path='/about' component={About} id='nav-about'/>
+                <Route exact path='/' component={Portfolio} id='nav-portfolio'/>
                 <Route path='/portfolio' component={Portfolio} id='nav-portfolio'/>
+                <Route path='/about' component={About} id='nav-about'/>
                 <Route path='/contact' component={Contact} id='nav-contact'/>
                 <Route path='/resume' component={Resume} id='nav-resume'/>
             </div>
@@ -34,26 +34,6 @@ class About extends React.Component {
     render() {
         return <div className="container">
             <h1>about me</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
-            <h1>hello</h1>
         </div>
     }
 }
@@ -109,7 +89,7 @@ class Header extends React.Component {
                     <div className="row">
                         <div className="col">
                             <p className="lead">I am a second year CS student at Northeastern University's Khoury
-                                College of Computer Sciences, looking to expand my knowledge of the field and
+                                College of Computer Sciences looking to expand my knowledge of the field and
                                 gain experience, especially in software engineering and web development.</p>
                             <p className="lead"> Please note this site is a work in progress as of October 2019.</p>
                         </div>
@@ -119,7 +99,8 @@ class Header extends React.Component {
                 </div>
             </div>
 
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light" style={navbarStyle}>
+                <div className="container">
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link to='/portfolio' className='nav-link'>Portfolio</Link>
@@ -134,9 +115,8 @@ class Header extends React.Component {
                         <Link to='/resume' className='nav-link'>Resume</Link>
                     </li>
                 </ul>
+                </div>
             </nav>
-
-
 
         </div>
     }
@@ -149,9 +129,7 @@ const jumboStyle = {
 }
 
 const navbarStyle = {
-    marginLeft: '50px',
-    padding: '0px',
-    margin: '0px'
+    paddingLeft: '0px'
 }
 
 const buttonStyle = {

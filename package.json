@@ -5,6 +5,7 @@
   "homepage": ".",
   "dependencies": {
     "react": "^16.10.2",
+    "react-card-flip": "^0.8.1",
     "react-dom": "^16.10.2",
     "react-scripts": "^2.1.8"
   },
