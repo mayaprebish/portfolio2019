@@ -1,16 +1,14 @@
-body {
-    background-color: black;
+.card-container {
+    width: 100%;
+    height: 50px;
+    border: 1px solid black;
+    transition: width 2s, height 1s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
 }
 
-.nav-item, .nav-link {
-    text-decoration: none;
-}
-
-.jumbotron {
-    padding: 10px;
-    margin: 10px;
-}
-
-.btn {
-    border-radius: 0px;
+.card-container:hover {
+    width: 100%;
+    height: 300px;
 }

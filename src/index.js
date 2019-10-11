@@ -4,6 +4,10 @@ const Link = window.ReactRouterDOM.Link;
 const Prompt = window.ReactRouterDOM.Prompt;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
+const React = window.React;
+const ReactDOM = window.ReactDOM;
+const Button = window.React.Button;
+
 
 class App extends React.Component {
     constructor(props) {
@@ -26,6 +30,27 @@ class App extends React.Component {
     }
 }
 
+class Card extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            title: this.props.title,
+            description: this.props.description
+        }
+    }
+
+    render() {
+        return (
+            <div className='card-container' style={cardStyle}>
+                <div className='card-body'>
+                    <h1 style={titleStyle}>{this.state.title}</h1>
+                    <p>{this.state.description}</p>
+                </div>
+            </div>
+        )
+    }
+}
+
 class About extends React.Component {
     constructor(props) {
         super(props);
@@ -33,7 +58,16 @@ class About extends React.Component {
 
     render() {
         return <div className="container">
-            <h1>about me</h1>
+            <div className="media" style={listStyle}>
+                <img src="https://live.staticflickr.com/65535/48879221932_8164bc770e_o.jpg"
+                     className="mr-3"
+                     alt="about photo"
+                     width="600px"/>
+                <div className="media-body">
+                    <h5 className="mt-0">About Me</h5>
+
+                </div>
+            </div>
         </div>
     }
 }
@@ -45,7 +79,13 @@ class Portfolio extends React.Component {
 
     render() {
         return <div className="container">
-            <h1>work</h1>
+            <div className="container">
+                <div className="row">
+                    <Card title="test1" description="this is the first test"/>
+                    <Card title="test2" description="this is the second test"/>
+                </div>
+
+            </div>
         </div>
     }
 }
@@ -57,7 +97,25 @@ class Contact extends React.Component {
 
     render() {
         return <div className="container">
-            <h1>contact</h1>
+            <ul className="list-group" style={listStyle}>
+                <li className="list-group-item d-flex justify-content-between align-items-center vertical-align-center">
+                    <div>
+                        <p style={liStyle}> Email: prebish.m@husky.neu.edu</p>
+
+                    </div>
+                    <i className="fa fa-envelope" style={iconStyle}></i>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                        <p style={liStyle}>LinkedIn: <a style={liStyle} target="_blank"
+                                                        href="https://www.linkedin.com/in/maya-prebish-24b146194">Maya
+                            Prebish</a>
+                        </p>
+
+                    </div>
+                    <i className="fa fa-linkedin-square" style={iconStyle}></i>
+                </li>
+            </ul>
         </div>
     }
 }
@@ -71,7 +129,9 @@ class Resume extends React.Component {
         return <div className="container">
             <a target="_blank"
                href="https://docs.google.com/document/d/1NQcSp1peqMEnJ2zk0xbswHT1uhnCitKlUpvXvwyN304/edit?usp=sharing">
-                <button className="btn btn-dark">View on Google Drive</button>
+                <button className="btn btn-dark"
+                        style={buttonStyle}>View on Google Drive
+                </button>
             </a>
 
             <div className="container-fluid">
@@ -111,20 +171,20 @@ class Header extends React.Component {
 
             <nav className="navbar navbar-expand-lg navbar-light bg-light" style={navbarStyle}>
                 <div className="container">
-                <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <Link to='/portfolio' className='nav-link'>Portfolio</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/about' className='nav-link'>About</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/contact' className='nav-link'>Contact</Link>
-                    </li>
-                    <li className="nav-item">
-                        <Link to='/resume' className='nav-link'>Resume</Link>
-                    </li>
-                </ul>
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link to='/portfolio' className='nav-link'>Portfolio</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/about' className='nav-link'>About</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/contact' className='nav-link'>Contact</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/resume' className='nav-link'>Resume</Link>
+                        </li>
+                    </ul>
                 </div>
             </nav>
 
@@ -143,11 +203,34 @@ const navbarStyle = {
 }
 
 const buttonStyle = {
-    margin: '10px',
-    borderRadius: '0px'
+    marginTop: '20px',
+}
+
+const iconStyle = {
+    margin: '0px',
+    padding: '0px'
+}
+
+const cardStyle = {
+    marginTop: '20px'
+}
+
+const liStyle = {
+    marginTop: '0px',
+    marginBottom: '0px'
+}
+
+const listStyle = {
+    marginTop: '20px'
+}
+
+const titleStyle = {
+    marginTop: '0px',
+    paddingTop: '0px'
 }
 
 ReactDOM.render(
-    <App/>,
+    <App/>
+    ,
     document.getElementById('root')
 );
