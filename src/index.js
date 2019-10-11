@@ -92,7 +92,7 @@ class Portfolio extends React.Component {
     }
 
     render() {
-        return <div className="container">
+        return <div className="container-fluid portfolio">
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -108,7 +108,7 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                         }
-                              imgsrc="https://giphy.com/embed/JNOUPvQtrgE7kP2gd1"/>
+                              />
 
                         <Card title="ExCellence" body={
                             <div>
