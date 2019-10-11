@@ -111,13 +111,11 @@ class About extends React.Component {
                     <p>Finally, I'm interested in digital art. I've always liked to draw, and I like making sketches
                         of people and places from my life.</p>
 
-                    <p>Image sources:
+                    <p style={{fontSize: 12}}>Image sources:
                         <a href="https://i2.wp.com/cornellsun.com/wp-content/uploads/2017/01/alabama-shakes.jpg?fit=600%2C600">Sound
                             & Color, </a>
-
                         <a href="https://thehub.musiciansfriend.com/images/interviews/Courtney-Barnett-Header.jpg">Courtney
                             Barnett, </a>
-
                         <a href="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/11/link-zelda-1200x600.png">Legend
                             of Zelda</a>
                     </p>
