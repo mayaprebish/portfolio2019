@@ -35,7 +35,8 @@ class Card extends React.Component {
         super(props);
         this.state = {
             title: this.props.title,
-            description: this.props.description
+            description: this.props.description,
+            imgsrc: this.props.imgsrc
         }
     }
 
@@ -43,8 +44,14 @@ class Card extends React.Component {
         return (
             <div className='card-container' style={cardStyle}>
                 <div className='card-body'>
-                    <h1 style={titleStyle}>{this.state.title}</h1>
-                    <p>{this.state.description}</p>
+                    <div className="row">
+                        <h3 style={titleStyle}>{this.state.title}</h3>
+                    </div>
+                    <div className="row">
+                        <p>{this.state.description}</p>
+                        <img src={this.state.imgsrc}
+                            width='300px'/>
+                    </div>
                 </div>
             </div>
         )
@@ -81,8 +88,19 @@ class Portfolio extends React.Component {
         return <div className="container">
             <div className="container">
                 <div className="row">
-                    <Card title="test1" description="this is the first test"/>
-                    <Card title="test2" description="this is the second test"/>
+                    <div className="col">
+                        <Card title="MATLAB" description="this is the first test"/>
+                        <Card title="ExCellence" description="this is the second test"/>
+                        <Card title="Minesweeper" description="this is the third test"/>
+                        <Card title="AcuityView" description="this is the fourth test"/>
+                    </div>
+
+                    <div className="col">
+                        <Card title="test1" description="this is the first test"/>
+                        <Card title="test2" description="this is the second test"/>
+                        <Card title="test3" description="this is the third test"/>
+                        <Card title="test4" description="this is the fourth test"/>
+                    </div>
                 </div>
 
             </div>
@@ -212,7 +230,8 @@ const iconStyle = {
 }
 
 const cardStyle = {
-    marginTop: '20px'
+    marginTop: '20px',
+    marginBottom: '20px'
 }
 
 const liStyle = {
