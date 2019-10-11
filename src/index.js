@@ -29,6 +29,7 @@ class App extends React.Component {
                 <Route path='/matlab' component={MatLab} id='matlab'/>
                 <Route path='/excellence' component={Excellence} id='excellence'/>
                 <Route path='/minesweeper' component={Minesweeper} id='minesweeper'/>
+                <Route path='/acuityview' component={AcuityView} id='acuityview'/>
             </div>
         </Router>
     }
@@ -96,6 +97,24 @@ class Portfolio extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col">
+                        <Card title="Portfolio site" body={
+                            <div>
+                                <div className="row">
+                                    <p style={bodyTextStyle}>This site was created using HTML, CSS, Node.js, React.js,
+                                    and Bootstrap.</p>
+                                </div>
+                                <div className="row">
+                                    <button style={buttonRowStyle}
+                                            href="https://github.com/mayaprebish/mayaprebish.github.io"
+                                            type="button"
+                                            className="btn btn-secondary">
+                                        View code on GitHub
+                                    </button>
+                                </div>
+                            </div>
+                        }
+                        />
+
                         <Card title="MATLAB" body={
                             <div>
                                 <div className="row">
@@ -143,7 +162,25 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
-                        <Card title="AcuityView" body={<p>acuityview</p>}/>
+                        <Card title="AcuityView" body={
+                            <div>
+                                <div className="row">
+                                    <p style={bodyTextStyle}>Figures produced using the R program AcuityView for
+                                    the paper Effects of limited acuity on Anolis dewlaps, currently in review by
+                                        the Journal of Herpetology.</p>
+                                </div>
+                                <div className="row">
+                                    <Link to='/acuityview'>
+                                    <button
+                                        style={buttonRowStyle}
+                                        type="button"
+                                        className="btn btn-secondary">
+                                        View details & full paper
+                                    </button>
+                                    </Link>
+                                </div>
+                            </div>
+                        }/>
                     </div>
                 </div>
 
@@ -228,6 +265,17 @@ class Minesweeper extends React.Component {
     render() {
         return <div>
             <h1>minesweeper</h1>
+        </div>
+    }
+}
+
+class AcuityView extends React.Component {
+    render() {
+        return <div className="container">
+            <iframe
+                width="90%"
+                height="1500px"
+                src="https://docs.google.com/document/d/e/2PACX-1vQirphRe5tYechlsrC-plaKXsXcChl0DEPJtbcd84OV5y4vKzuOhqZw9yLkHsYBIvRzXTU5pJs0WkWFnWsOhd8/pub?embedded=true"></iframe>
         </div>
     }
 }
