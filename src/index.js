@@ -74,14 +74,26 @@ class About extends React.Component {
 
     render() {
         return <div className="container">
-            <div className="media" style={listStyle}>
-                <div className="media-body text-right">
-                    <h3 className="mt-0">About Me</h3>
+            <div className="row" style={listStyle}>
+                <div className="col-5">
+                    <img src="https://live.staticflickr.com/65535/48882028043_081b73c769_o.jpg"
+                         alt="about photo"
+                         width="100%"/>
                 </div>
-                <img src="https://live.staticflickr.com/65535/48879221932_8164bc770e_o.jpg"
-                     className="mr-3"
-                     alt="about photo"
-                     width="600px"/>
+                <div className="col-7 text-left">
+                    <h3>About Me</h3>
+                    <p>I am a second-year at Northeastern University seeking a BA in Computer Science, and my topics of
+                    interest in the CS field are software engineering and web development. I've been involved in
+                    programming since high school, but have always been fascinated by the history and development of
+                        modern computing.</p>
+
+                    <p>I'm a thorough worker who picks up new languages quickly, and I'm quick at finding bugs in my
+                        code and others'. I'm not intimidated by what I don't know, and I thrive in environments
+                    where I'm immersed in topics that are brand new to me because I find it's the best way to learn.</p>
+
+                    <p>Outside of school, my biggest passion is music. I have a new favorite album every
+                    week, and I play music with my friends whenever I get the chance.</p>
+                </div>
             </div>
         </div>
     }
@@ -101,10 +113,11 @@ class Portfolio extends React.Component {
                             <div>
                                 <div className="row">
                                     <p style={bodyTextStyle}>This site was created using HTML, CSS, Node.js, React.js,
-                                    and Bootstrap.</p>
+                                        and Bootstrap.</p>
                                 </div>
                                 <div className="row">
                                     <button style={buttonRowStyle}
+                                            target="_blank"
                                             href="https://github.com/mayaprebish/mayaprebish.github.io"
                                             type="button"
                                             className="btn btn-secondary">
@@ -127,21 +140,21 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                         }
-                              />
+                        />
 
                         <Card title="ExCellence" body={
                             <div>
                                 <div className="row">
                                     <p style={bodyTextStyle}>A Java program which renders specially formatted
-                                    text files into visual animations, using the Model-View-Controller design
-                                    strategy.</p>
+                                        text files into visual animations, using the Model-View-Controller design
+                                        strategy.</p>
                                 </div>
                                 <div className="row">
                                     <Buttons
                                         style={buttonRowStyle}
                                         to='/excellence'
                                         alert={<p>For academic privacy reasons, please
-                                        <Link to='/contact'> contact me</Link> for access to this repo.</p>}/>
+                                            <Link to='/contact'> contact me</Link> for access to this repo.</p>}/>
                                 </div>
                             </div>
                         }/>
@@ -150,7 +163,7 @@ class Portfolio extends React.Component {
                             <div>
                                 <div className="row">
                                     <p style={bodyTextStyle}>A replica of the Minesweeper computer game in Java
-                                    using a breadth-first search strategy for rendering current state.</p>
+                                        using a breadth-first search strategy for rendering current state.</p>
                                 </div>
                                 <div className="row">
                                     <Buttons
@@ -166,17 +179,17 @@ class Portfolio extends React.Component {
                             <div>
                                 <div className="row">
                                     <p style={bodyTextStyle}>Figures produced using the R program AcuityView for
-                                    the paper Effects of limited acuity on Anolis dewlaps, currently in review by
+                                        the paper Effects of limited acuity on Anolis dewlaps, currently in review by
                                         the Journal of Herpetology.</p>
                                 </div>
                                 <div className="row">
                                     <Link to='/acuityview'>
-                                    <button
-                                        style={buttonRowStyle}
-                                        type="button"
-                                        className="btn btn-secondary">
-                                        View details & full paper
-                                    </button>
+                                        <button
+                                            style={buttonRowStyle}
+                                            type="button"
+                                            className="btn btn-secondary">
+                                            View details & full paper
+                                        </button>
                                     </Link>
                                 </div>
                             </div>
