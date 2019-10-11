@@ -7,7 +7,8 @@ const Redirect = window.ReactRouterDOM.Redirect;
 const React = window.React;
 const ReactDOM = window.ReactDOM;
 const Button = window.React.Button;
-
+const Overlay = window.React.Overlay;
+const $ = window.jQuery;
 
 class App extends React.Component {
     constructor(props) {
@@ -25,6 +26,9 @@ class App extends React.Component {
                 <Route path='/about' component={About} id='nav-about'/>
                 <Route path='/contact' component={Contact} id='nav-contact'/>
                 <Route path='/resume' component={Resume} id='nav-resume'/>
+                <Route path='/matlab' component={MatLab} id='matlab'/>
+                <Route path='/excellence' component={Excellence} id='excellence'/>
+                <Route path='/minesweeper' component={Minesweeper} id='minesweeper'/>
             </div>
         </Router>
     }
@@ -35,7 +39,7 @@ class Card extends React.Component {
         super(props);
         this.state = {
             title: this.props.title,
-            description: this.props.description,
+            body: this.props.body,
             imgsrc: this.props.imgsrc
         }
     }
@@ -48,9 +52,13 @@ class Card extends React.Component {
                         <h3 style={titleStyle}>{this.state.title}</h3>
                     </div>
                     <div className="row">
-                        <p>{this.state.description}</p>
-                        <img src={this.state.imgsrc}
-                            width='300px'/>
+                        <div className="col">
+                            {this.state.body}
+                        </div>
+                        <div className="col">
+                            <img src={this.state.imgsrc}
+                                 width='300px'/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,14 +74,13 @@ class About extends React.Component {
     render() {
         return <div className="container">
             <div className="media" style={listStyle}>
+                <div className="media-body text-right">
+                    <h3 className="mt-0">About Me</h3>
+                </div>
                 <img src="https://live.staticflickr.com/65535/48879221932_8164bc770e_o.jpg"
                      className="mr-3"
                      alt="about photo"
                      width="600px"/>
-                <div className="media-body">
-                    <h5 className="mt-0">About Me</h5>
-
-                </div>
             </div>
         </div>
     }
@@ -89,21 +96,138 @@ class Portfolio extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <Card title="MATLAB" description="this is the first test"/>
-                        <Card title="ExCellence" description="this is the second test"/>
-                        <Card title="Minesweeper" description="this is the third test"/>
-                        <Card title="AcuityView" description="this is the fourth test"/>
-                    </div>
+                        <Card title="MATLAB" body={
+                            <div>
+                                <div className="row">
+                                    <p style={bodyTextStyle}>A MATLAB Live Script which can be used to
+                                        track movement of subjects over time visually.</p>
+                                </div>
+                                <div className="row">
+                                    <Buttons style={buttonRowStyle}
+                                             to='/matlab'/>
+                                </div>
+                            </div>
+                        }
+                              imgsrc="https://giphy.com/embed/JNOUPvQtrgE7kP2gd1"/>
 
-                    <div className="col">
-                        <Card title="test1" description="this is the first test"/>
-                        <Card title="test2" description="this is the second test"/>
-                        <Card title="test3" description="this is the third test"/>
-                        <Card title="test4" description="this is the fourth test"/>
+                        <Card title="ExCellence" body={
+                            <div>
+                                <div className="row">
+                                    <p style={bodyTextStyle}>A Java program which renders specially formatted
+                                    text files into visual animations, using the Model-View-Controller design
+                                    strategy.</p>
+                                </div>
+                                <div className="row">
+                                    <Buttons
+                                        style={buttonRowStyle}
+                                        to='/excellence'
+                                        alert={<p>For academic privacy reasons, please
+                                        <Link to='/contact'> contact me</Link> for access to this repo.</p>}/>
+                                </div>
+                            </div>
+                        }/>
+
+                        <Card title="Minesweeper" body={
+                            <div>
+                                <div className="row">
+                                    <p style={bodyTextStyle}>A replica of the Minesweeper computer game in Java
+                                    using a breadth-first search strategy for rendering current state.</p>
+                                </div>
+                                <div className="row">
+                                    <Buttons
+                                        style={buttonRowStyle}
+                                        to='/minesweeper'
+                                        alert={<p>For academic privacy reasons, please
+                                            <Link to='/contact'> contact me</Link> for access to this repo.</p>}/>
+                                </div>
+                            </div>
+                        }/>
+
+                        <Card title="AcuityView" body={<p>acuityview</p>}/>
                     </div>
                 </div>
 
             </div>
+        </div>
+    }
+}
+
+class Buttons extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            render: '',
+            alert: this.props.alert,
+            to: this.props.to
+        }
+    }
+
+    handleClick(compName, e) {
+        console.log(compName);
+        this.setState({render: compName});
+    }
+
+    renderAlert() {
+        if (this.state.render == 'render') {
+            return <Alert message={this.state.alert}/>
+        }
+    }
+
+    render() {
+        return (
+            <div>
+                <div className="row">
+                    <Link to={this.state.to} style={buttonRowStyle}>
+                        <button style={alignRight} type="button" className="btn btn-secondary">Details</button>
+                    </Link>
+                    <button style={buttonRowStyle} type="button" className="btn btn-secondary"
+                            onClick={this.handleClick.bind(this, 'render')}>
+                        GitHub
+                    </button>
+                </div>
+                <div className="row" style={buttonRowStyle}>
+                    {this.renderAlert()}
+                </div>
+            </div>
+        );
+    }
+}
+
+class Alert extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            message: this.props.message
+        }
+    }
+
+    render() {
+        return <div>
+            {this.state.message}
+        </div>
+    }
+}
+
+class MatLab extends React.Component {
+    render() {
+        return <div>
+            <h1>matlab</h1>
+        </div>
+    }
+}
+
+class Excellence extends React.Component {
+    render() {
+        return <div>
+            <h1>excellence</h1>
+        </div>
+    }
+}
+
+class Minesweeper extends React.Component {
+    render() {
+        return <div>
+            <h1>minesweeper</h1>
         </div>
     }
 }
@@ -119,17 +243,15 @@ class Contact extends React.Component {
                 <li className="list-group-item d-flex justify-content-between align-items-center vertical-align-center">
                     <div>
                         <p style={liStyle}> Email: prebish.m@husky.neu.edu</p>
-
                     </div>
                     <i className="fa fa-envelope" style={iconStyle}></i>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center">
                     <div>
-                        <p style={liStyle}>LinkedIn: <a style={liStyle} target="_blank"
-                                                        href="https://www.linkedin.com/in/maya-prebish-24b146194">Maya
-                            Prebish</a>
+                        <p style={liStyle}>LinkedIn:
+                            <a style={liStyle} target="_blank"
+                               href="https://www.linkedin.com/in/maya-prebish-24b146194">Maya Prebish</a>
                         </p>
-
                     </div>
                     <i className="fa fa-linkedin-square" style={iconStyle}></i>
                 </li>
@@ -245,11 +367,24 @@ const listStyle = {
 
 const titleStyle = {
     marginTop: '0px',
-    paddingTop: '0px'
+    paddingTop: '0px,',
+    marginLeft: '5px'
+}
+
+const buttonRowStyle = {
+    marginLeft: '10px',
+    marginBottom: '10px'
+}
+
+const bodyTextStyle = {
+    marginLeft: '10px'
+}
+
+const alignRight = {
+    marginLeft: '10px'
 }
 
 ReactDOM.render(
-    <App/>
-    ,
+    <App/>,
     document.getElementById('root')
 );
