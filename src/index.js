@@ -75,26 +75,60 @@ class About extends React.Component {
     render() {
         return <div className="container">
             <div className="row" style={listStyle}>
-                <div className="col-5">
+                <div className="col-4">
                     <img src="https://live.staticflickr.com/65535/48882028043_081b73c769_o.jpg"
                          alt="about photo"
                          width="100%"/>
                 </div>
-                <div className="col-7 text-left">
+                <div className="col-8 text-left">
                     <h3>About Me</h3>
-                    <p>I am a second-year at Northeastern University seeking a BA in Computer Science, and my topics of
-                    interest in the CS field are software engineering and web development. I've been involved in
-                    programming since high school, but have always been fascinated by the history and development of
+                    <p>I am a second-year at Northeastern University seeking a BA in Computer Science. My topics of
+                        interest in the CS field are software engineering and web development. I've been involved in
+                        programming since high school, but have always been fascinated by the history and development of
                         modern computing.</p>
 
-                    <p>I'm a thorough worker who picks up new languages quickly, and I'm quick at finding bugs in my
-                        code and others'. I'm not intimidated by what I don't know, and I thrive in environments
-                    where I'm immersed in topics that are brand new to me because I find it's the best way to learn.</p>
-
-                    <p>Outside of school, my biggest passion is music. I have a new favorite album every
-                    week, and I play music with my friends whenever I get the chance.</p>
+                    <p>I'm a thorough worker who picks up new languages quickly. I love to learn, and I thrive in
+                        environments where I'm immersed in topics that are brand new to me. The primary traits I
+                        have to offer in a professional environment are my ability to communicate, my ability to
+                        work independently, and my instinct to work thoroughly and consistently until a job gets
+                        done.</p>
                 </div>
             </div>
+
+            <div className="row" style={listStyle}>
+                <div className="col-8 text-right">
+                    <h3>Interests</h3>
+
+                    <p>Outside of school, my biggest passion is music. I have a new favorite album every
+                        week, and I play music with my friends whenever I get the chance. My instruments of choice
+                        are guitar, bass and drums.</p>
+
+                    <p>I also love playing games in my free time. My favorite genres are RPG games (Skyrim, Fable,
+                        Archeage), puzzle/adventure games (Legend of Zelda, Pokemon) and casual/relaxing games
+                        (Animal Crossing, Stardew Valley). I like to stay updated on the gaming industry and I've
+                        dabbled in game programming in and out of school.</p>
+
+                    <p>Finally, I'm interested in digital art. I've always liked to draw, and I like making sketches
+                        of people and places from my life.</p>
+
+                    <p>Image sources:
+                        <a href="https://i2.wp.com/cornellsun.com/wp-content/uploads/2017/01/alabama-shakes.jpg?fit=600%2C600">Sound
+                            & Color, </a>
+
+                        <a href="https://thehub.musiciansfriend.com/images/interviews/Courtney-Barnett-Header.jpg">Courtney
+                            Barnett, </a>
+
+                        <a href="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/11/link-zelda-1200x600.png">Legend
+                            of Zelda</a>
+                    </p>
+                </div>
+                <div className="col-4">
+                    <img src="https://live.staticflickr.com/65535/48882240643_bdcf5595cd_o.png"
+                         alt="about photo"
+                         width="100%"/>
+                </div>
+            </div>
+
         </div>
     }
 }
@@ -116,13 +150,14 @@ class Portfolio extends React.Component {
                                         and Bootstrap.</p>
                                 </div>
                                 <div className="row">
-                                    <button style={buttonRowStyle}
-                                            target="_blank"
-                                            href="https://github.com/mayaprebish/mayaprebish.github.io"
-                                            type="button"
-                                            className="btn btn-secondary">
-                                        View code on GitHub
-                                    </button>
+                                    <a target="_blank"
+                                       href="https://github.com/mayaprebish/mayaprebish.github.io">
+                                        <button style={buttonRowStyle}
+                                                type="button"
+                                                className="btn btn-secondary">
+                                            View code on GitHub
+                                        </button>
+                                    </a>
                                 </div>
                             </div>
                         }
