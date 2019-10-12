@@ -21,7 +21,7 @@ class App extends React.Component {
             <div>
                 <Header/>
 
-                <Route exact path='/' component={Resume} id='nav-resume'/>
+                <Route exact path='/' component={Portfolio} id='nav-index'/>
                 <Route path='/portfolio' component={Portfolio} id='nav-portfolio'/>
                 <Route path='/about' component={About} id='nav-about'/>
                 <Route path='/contact' component={Contact} id='nav-contact'/>
