@@ -30,6 +30,7 @@ class App extends React.Component {
                 <Route path='/excellence' component={Excellence} id='excellence'/>
                 <Route path='/minesweeper' component={Minesweeper} id='minesweeper'/>
                 <Route path='/acuityview' component={AcuityView} id='acuityview'/>
+                <Route path='/bulletgame' component={BulletGame} id='bulletgame'/>
             </div>
         </Router>
     }
@@ -208,6 +209,22 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
+                        <Card title="Bullets" body={
+                            <div>
+                                <div className="row">
+                                    <p style={bodyTextStyle}>A bullet game rendered in Java using a linked-list data
+                                        structure to track collisions.</p>
+                                </div>
+                                <div className="row">
+                                    <Buttons
+                                        style={buttonRowStyle}
+                                        to='/bulletgame'
+                                        alert={<p>For academic privacy reasons, please
+                                            <Link to='/contact'> contact me</Link> for access to this repo.</p>}/>
+                                </div>
+                            </div>
+                        }/>
+
                         <Card title="AcuityView" body={
                             <div>
                                 <div className="row">
@@ -294,7 +311,27 @@ class Alert extends React.Component {
 class MatLab extends React.Component {
     render() {
         return <div>
-            <h1>matlab</h1>
+            <div className="container">
+                <h2>MATLAB: Lizard Data</h2>
+                <p>I wrote this fairly simple program while helping with research at Union College alongside Professor
+                    Leo J. Fleishman, who studies animal behavior--in particular, movement and vision of the lizard
+                    genus
+                    Anolis. For this project, I was asked to create a 3D graph tracking X, Y and Z movement of subjects
+                    in their enclosure over time.</p>
+                <p>For this program, I learned the basics of MATLAB in order to produce a Live Script that researchers
+                    can
+                    use to track movement over specific periods of time from a table of data.</p>
+                <div className="row">
+                    <div className="col">
+                        <img src="https://media.giphy.com/media/JNOUPvQtrgE7kP2gd1/source.gif" width="100%"
+                             frameBorder="0"></img>
+                    </div>
+
+                    <div className="col">
+                        <img src="https://live.staticflickr.com/65535/48883978527_24d1770258_o.jpg" width="100%"/>
+                    </div>
+                </div>
+            </div>
         </div>
     }
 }
@@ -322,6 +359,15 @@ class AcuityView extends React.Component {
                 width="90%"
                 height="1500px"
                 src="https://docs.google.com/document/d/e/2PACX-1vQirphRe5tYechlsrC-plaKXsXcChl0DEPJtbcd84OV5y4vKzuOhqZw9yLkHsYBIvRzXTU5pJs0WkWFnWsOhd8/pub?embedded=true"></iframe>
+        </div>
+    }
+}
+
+class BulletGame extends React.Component {
+    render() {
+        return <div className="container">
+            <iframe src="https://giphy.com/embed/H5HHoJ6o9fsMbIyX0i" width="480" height="300" frameBorder="0"
+                    className="giphy-embed" allowFullScreen></iframe>
         </div>
     }
 }
@@ -363,7 +409,7 @@ class Resume extends React.Component {
         return <div className="container">
             <a target="_blank"
                href="https://docs.google.com/document/d/1NQcSp1peqMEnJ2zk0xbswHT1uhnCitKlUpvXvwyN304/edit?usp=sharing">
-                <button className="btn btn-dark"
+                <button className="btn btn-secondary"
                         style={buttonStyle}>View on Google Drive
                 </button>
             </a>
