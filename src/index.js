@@ -194,22 +194,6 @@ class Portfolio extends React.Component {
                         }
                         />
 
-                        <Card title="MATLAB" body={
-                            <div>
-                                <div className="row">
-                                    <p style={bodyTextStyle}>A MATLAB Live Script which can be used to
-                                        graph 3D movement of subjects over time.</p>
-                                </div>
-                                <div className="row">
-                                    <Link to='/matlab'>
-                                        <button style={buttonRowStyle} type="button" className="btn btn-secondary">
-                                            Details
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>}
-                        />
-
                         <Card title="Bullets" body={
                             <div>
                                 <div className="row">
@@ -258,6 +242,22 @@ class Portfolio extends React.Component {
                                 </div>
                             </div>
                         }/>
+
+                        <Card title="MATLAB" body={
+                            <div>
+                                <div className="row">
+                                    <p style={bodyTextStyle}>A MATLAB Live Script which can be used to
+                                        graph 3D movement of subjects over time.</p>
+                                </div>
+                                <div className="row">
+                                    <Link to='/matlab'>
+                                        <button style={buttonRowStyle} type="button" className="btn btn-secondary">
+                                            Details
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>}
+                        />
 
                         <Card title="AcuityView" body={
                             <div>
