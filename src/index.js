@@ -75,61 +75,91 @@ class About extends React.Component {
     }
 
     render() {
-        return <div className="container">
-            <div className="row" style={listStyle}>
-                <div className="col-4">
-                    <img src="https://live.staticflickr.com/65535/48882028043_081b73c769_o.jpg"
-                         alt="about photo"
-                         width="100%"/>
-                </div>
-                <div className="col-8 text-left">
-                    <h3>About Me</h3>
-                    <p>I am a second-year at Northeastern University seeking a BA in Computer Science. My topics of
-                        interest in the CS field are software engineering and web development. I've been involved in
-                        programming since high school, but have always been fascinated by the history and development of
-                        modern computing.</p>
+        return <div>
+            <div className="container">
+                <div className="row" style={listStyle}>
+                    <div className="col-4">
+                        <img src="https://live.staticflickr.com/65535/48882028043_081b73c769_o.jpg"
+                             alt="about photo"
+                             width="100%"
+                             className="photo"/>
+                    </div>
+                    <div className="col-8 text-left">
+                        <h3>About Me</h3>
+                        <p>I am a second-year at Northeastern University seeking a BA in Computer Science. My topics of
+                            interest in the CS field are software engineering and web development. I've been involved in
+                            programming since high school, but have always been fascinated by the history and
+                            development of
+                            modern computing.</p>
 
-                    <p>I'm a thorough worker who picks up new languages quickly. I love to learn, and I thrive in
-                        environments where I'm immersed in topics that are brand new to me. The primary traits I
-                        have to offer in a professional environment are my ability to communicate, my ability to
-                        work independently, and my instinct to work thoroughly and consistently until a job gets
-                        done.</p>
+                        <p>I'm a thorough worker who picks up new languages quickly. I love to learn, and I thrive in
+                            environments where I'm immersed in topics that are brand new to me. The primary traits I
+                            have to offer in a professional environment are my ability to communicate, my ability to
+                            work independently, and my consistency and attention to detail.</p>
+                    </div>
                 </div>
+
+                <div className="row" style={listStyle}>
+                    <div className="col-8 text-right">
+                        <h3>Interests</h3>
+
+                        <p>Outside of school, my biggest passion is music, and I play with my friends whenever
+                            I get the chance. My instruments of choice are guitar, bass and drums, and I played in
+                            several bands throughout high school. I also helped host several live concerts a year
+                            through my club, Live Expression.</p>
+
+                        <p>My next favorite activity is gaming. I like to stay updated on the gaming industry and I've
+                            dabbled in videogame programming in and out of school. My favorite genres are RPG games
+                            (Skyrim,
+                            Fable, Fire Emblem), puzzle/adventure games (Legend of Zelda, Pokemon) and casual/relaxing
+                            games
+                            (Animal Crossing, Stardew Valley).</p>
+
+                        <p>I'm also interested in digital art. I've always liked to draw, and I like making sketches
+                            of people and places from my life. I hope to be a skilled digital artist at some point
+                            in the future.</p>
+                    </div>
+                    <div className="col-4">
+                        <img src="https://live.staticflickr.com/65535/48882240643_bdcf5595cd_o.png"
+                             alt="about photo"
+                             width="100%"
+                             className="photo"/>
+                    </div>
+                </div>
+
+                <div className="row" style={listStyle}>
+                    <div className="col-4">
+                        <img src="https://live.staticflickr.com/65535/48883505998_cd7d028f9b_o.png"
+                             alt="about photo"
+                             width="100%"
+                             className="photo"/>
+                    </div>
+                    <div className="col-8 text-left">
+                        <h3>Academics</h3>
+                        <p><b>GPA: 3.0/4</b></p>
+                        <p>Relevant Coursework: Web Development*, Algorithms & Data*, Computer Systems*, Object-Oriented
+                            Design, Discrete Structures, Fundamentals of Computer Science, Calculus 1 & 2&nbsp;
+                        <i>(*Currently Enrolled)</i></p>
+                        <p>*Unofficial transcript available upon request</p>
+                    </div>
+                </div>
+
             </div>
-
-            <div className="row" style={listStyle}>
-                <div className="col-8 text-right">
-                    <h3>Interests</h3>
-
-                    <p>Outside of school, my biggest passion is music, and I play with my friends whenever
-                        I get the chance. My instruments of choice are guitar, bass and drums.</p>
-
-                    <p>When I'm not playing music, I like to play games. My favorite genres are RPG games (Skyrim,
-                        Fable,
-                        Fire Emblem), puzzle/adventure games (Legend of Zelda, Pokemon) and casual/relaxing games
-                        (Animal Crossing, Stardew Valley). I like to stay updated on the gaming industry and I've
-                        dabbled in videogame programming in and out of school.</p>
-
-                    <p>I'm also interested in digital art. I've always liked to draw, and I like making sketches
-                        of people and places from my life. I hope to be a skilled digital artist at some point
-                        in the future.</p>
-
-                    <p style={{fontSize: 12}}>Image sources:
+            <footer className="nav" style={{marginTop: '200px'}}>
+                <div className="container">
+                    <p className="float-right" style={{fontSize: 14}}>Image sources:&nbsp;
                         <a href="https://i2.wp.com/cornellsun.com/wp-content/uploads/2017/01/alabama-shakes.jpg?fit=600%2C600">Sound
                             & Color, </a>
                         <a href="https://thehub.musiciansfriend.com/images/interviews/Courtney-Barnett-Header.jpg">Courtney
                             Barnett, </a>
                         <a href="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/11/link-zelda-1200x600.png">Legend
-                            of Zelda</a>
+                            of Zelda, </a>
+                        <a href="https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Northeastern_University_seal.svg/1200px-Northeastern_University_seal.svg.png">
+                            Northeastern Logo
+                        </a>
                     </p>
                 </div>
-                <div className="col-4">
-                    <img src="https://live.staticflickr.com/65535/48882240643_bdcf5595cd_o.png"
-                         alt="about photo"
-                         width="100%"/>
-                </div>
-            </div>
-
+            </footer>
         </div>
     }
 }
@@ -345,10 +375,13 @@ class Excellence extends React.Component {
         return <div>
             <div className="container">
                 <h2>ExCellence</h2>
-                <p>ExCellence is an application I created in Java with partner Jada Letts for CS3500 (Object Oriented Design).
-                The purpose of the application is to produce and edit simple animations made using specially formatted
-                text files. This project implemented the Model-View-Controller style of OO Design.</p>
-                <p>Please <Link to='/contact'>contact me </Link> for access to the GitHub repository for this program.</p>
+                <p>ExCellence is an application I created in Java with partner Jada Letts for CS3500 (Object Oriented
+                    Design).
+                    The purpose of the application is to produce and edit simple animations made using specially
+                    formatted
+                    text files. This project implemented the Model-View-Controller style of OO Design.</p>
+                <p>Please <Link to='/contact'>contact me </Link> for access to the GitHub repository for this program.
+                </p>
             </div>
         </div>
     }
@@ -360,8 +393,9 @@ class Minesweeper extends React.Component {
             <div className="container">
                 <h2>Minesweeper</h2>
                 <p>I created a replica of Minesweeper for Fundamentals of Computer Science II. I used a breadth-first
-                search algorithm to maintain state in the puzzle and implement the "flooding" behavior.</p>
-                <p>Please <Link to='/contact'>contact me </Link>for access to the GitHub repository for this program.</p>
+                    search algorithm to maintain state in the puzzle and implement the "flooding" behavior.</p>
+                <p>Please <Link to='/contact'>contact me </Link>for access to the GitHub repository for this program.
+                </p>
             </div>
         </div>
     }
@@ -413,13 +447,13 @@ class Contact extends React.Component {
             <ul className="list-group" style={listStyle}>
                 <li className="list-group-item d-flex justify-content-between align-items-center vertical-align-center">
                     <div>
-                        <p style={liStyle}> Email: prebish.m@husky.neu.edu</p>
+                        <p style={liStyle}><b>Email:</b> prebish.m@husky.neu.edu</p>
                     </div>
                     <i className="fa fa-envelope" style={iconStyle}></i>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center">
                     <div>
-                        <p style={liStyle}>LinkedIn:
+                        <p style={liStyle}><b>LinkedIn:</b>&nbsp;
                             <a style={liStyle} target="_blank"
                                href="https://www.linkedin.com/in/maya-prebish-24b146194">Maya Prebish</a>
                         </p>
