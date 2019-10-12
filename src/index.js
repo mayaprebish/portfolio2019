@@ -450,10 +450,12 @@ class Minesweeper extends React.Component {
         return <div>
             <div className="container">
                 <h2>Minesweeper</h2>
-                <p>I created a replica of Minesweeper for Fundamentals of Computer Science II. I used a breadth-first
-                    search algorithm to maintain state in the puzzle and implement the "flooding" behavior.</p>
+                <p>I created a replica of Minesweeper for Fundamentals of Computer Science II with partner Nicole
+                    Danuwidjaja. We used a breadth-first  search algorithm to maintain state in the puzzle and implement
+                    the "flooding" behavior.</p>
                 <p>Please <Link to='/contact'>contact me </Link>for access to the GitHub repository for this program.
                 </p>
+                <img src="https://media.giphy.com/media/idLK4WtMMi63WR6gBI/source.gif"/>
             </div>
         </div>
     }
