@@ -25,7 +25,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../old stuff/BulletGame" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ExCellence" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -87,7 +87,8 @@
       <updated>1570582897354</updated>
       <workItem from="1570582899487" duration="34759000" />
       <workItem from="1570814361471" duration="26109000" />
-      <workItem from="1570865011595" duration="18000" />
+      <workItem from="1570865011595" duration="54000" />
+      <workItem from="1570905721373" duration="861000" />
     </task>
     <servers />
   </component>
