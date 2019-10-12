@@ -58,8 +58,9 @@ class Card extends React.Component {
                             {this.state.body}
                         </div>
                         <div className="col">
-                            <img src={this.state.imgsrc}
-                                 width='300px'/>
+                            <img
+                                src={this.state.imgsrc}
+                                width='70%'/>
                         </div>
                     </div>
                 </div>
@@ -100,17 +101,18 @@ class About extends React.Component {
                 <div className="col-8 text-right">
                     <h3>Interests</h3>
 
-                    <p>Outside of school, my biggest passion is music. I have a new favorite album every
-                        week, and I play music with my friends whenever I get the chance. My instruments of choice
-                        are guitar, bass and drums.</p>
+                    <p>Outside of school, my biggest passion is music, and I play with my friends whenever
+                        I get the chance. My instruments of choice are guitar, bass and drums.</p>
 
-                    <p>I also love playing games in my free time. My favorite genres are RPG games (Skyrim, Fable,
-                        Archeage), puzzle/adventure games (Legend of Zelda, Pokemon) and casual/relaxing games
+                    <p>When I'm not playing music, I like to play games. My favorite genres are RPG games (Skyrim,
+                        Fable,
+                        Fire Emblem), puzzle/adventure games (Legend of Zelda, Pokemon) and casual/relaxing games
                         (Animal Crossing, Stardew Valley). I like to stay updated on the gaming industry and I've
-                        dabbled in game programming in and out of school.</p>
+                        dabbled in videogame programming in and out of school.</p>
 
-                    <p>Finally, I'm interested in digital art. I've always liked to draw, and I like making sketches
-                        of people and places from my life.</p>
+                    <p>I'm also interested in digital art. I've always liked to draw, and I like making sketches
+                        of people and places from my life. I hope to be a skilled digital artist at some point
+                        in the future.</p>
 
                     <p style={{fontSize: 12}}>Image sources:
                         <a href="https://i2.wp.com/cornellsun.com/wp-content/uploads/2017/01/alabama-shakes.jpg?fit=600%2C600">Sound
@@ -166,27 +168,28 @@ class Portfolio extends React.Component {
                             <div>
                                 <div className="row">
                                     <p style={bodyTextStyle}>A MATLAB Live Script which can be used to
-                                        track movement of subjects over time visually.</p>
+                                        graph 3D movement of subjects over time.</p>
                                 </div>
                                 <div className="row">
-                                    <Buttons style={buttonRowStyle}
-                                             to='/matlab'/>
+                                    <Link to='/matlab'>
+                                        <button style={buttonRowStyle} type="button" className="btn btn-secondary">
+                                            Details
+                                        </button>
+                                    </Link>
                                 </div>
-                            </div>
-                        }
+                            </div>}
                         />
 
-                        <Card title="ExCellence" body={
+                        <Card title="Bullets" body={
                             <div>
                                 <div className="row">
-                                    <p style={bodyTextStyle}>A Java program which renders specially formatted
-                                        text files into visual animations, using the Model-View-Controller design
-                                        strategy.</p>
+                                    <p style={bodyTextStyle}>A bullet game rendered in Java using a linked-list data
+                                        structure to track collisions.</p>
                                 </div>
                                 <div className="row">
                                     <Buttons
                                         style={buttonRowStyle}
-                                        to='/excellence'
+                                        to='/bulletgame'
                                         alert={<p>For academic privacy reasons, please
                                             <Link to='/contact'> contact me</Link> for access to this repo.</p>}/>
                                 </div>
@@ -209,16 +212,17 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
-                        <Card title="Bullets" body={
+                        <Card title="ExCellence" body={
                             <div>
                                 <div className="row">
-                                    <p style={bodyTextStyle}>A bullet game rendered in Java using a linked-list data
-                                        structure to track collisions.</p>
+                                    <p style={bodyTextStyle}>A Java program which renders specially formatted
+                                        text files into visual animations, using the Model-View-Controller design
+                                        strategy.</p>
                                 </div>
                                 <div className="row">
                                     <Buttons
                                         style={buttonRowStyle}
-                                        to='/bulletgame'
+                                        to='/excellence'
                                         alert={<p>For academic privacy reasons, please
                                             <Link to='/contact'> contact me</Link> for access to this repo.</p>}/>
                                 </div>
@@ -229,8 +233,8 @@ class Portfolio extends React.Component {
                             <div>
                                 <div className="row">
                                     <p style={bodyTextStyle}>Figures produced using the R program AcuityView for
-                                        the paper Effects of limited acuity on Anolis dewlaps, currently in review by
-                                        the Journal of Herpetology.</p>
+                                        the paper <i>Effects of limited acuity on Anolis dewlaps</i>, currently in
+                                        review by the Journal of Herpetology.</p>
                                 </div>
                                 <div className="row">
                                     <Link to='/acuityview'>
@@ -339,7 +343,13 @@ class MatLab extends React.Component {
 class Excellence extends React.Component {
     render() {
         return <div>
-            <h1>excellence</h1>
+            <div className="container">
+                <h2>ExCellence</h2>
+                <p>ExCellence is an application I created in Java with partner Jada Letts for CS3500 (Object Oriented Design).
+                The purpose of the application is to produce and edit simple animations made using specially formatted
+                text files. This project implemented the Model-View-Controller style of OO Design.</p>
+                <p>Please <Link to='/contact'>contact me </Link> for access to the GitHub repository for this program.</p>
+            </div>
         </div>
     }
 }
@@ -347,18 +357,33 @@ class Excellence extends React.Component {
 class Minesweeper extends React.Component {
     render() {
         return <div>
-            <h1>minesweeper</h1>
+            <div className="container">
+                <h2>Minesweeper</h2>
+                <p>I created a replica of Minesweeper for Fundamentals of Computer Science II. I used a breadth-first
+                search algorithm to maintain state in the puzzle and implement the "flooding" behavior.</p>
+                <p>Please <Link to='/contact'>contact me </Link>for access to the GitHub repository for this program.</p>
+            </div>
         </div>
     }
 }
 
 class AcuityView extends React.Component {
     render() {
-        return <div className="container">
-            <iframe
-                width="90%"
-                height="1500px"
-                src="https://docs.google.com/document/d/e/2PACX-1vQirphRe5tYechlsrC-plaKXsXcChl0DEPJtbcd84OV5y4vKzuOhqZw9yLkHsYBIvRzXTU5pJs0WkWFnWsOhd8/pub?embedded=true"></iframe>
+        return <div>
+            <div className="container">
+                <h2>AcuityView</h2>
+                <p>One of my tasks while helping with research at Union College this Summer was to produce figures
+                    for the paper <i>Effects of limited acuity on Anolis dewlaps</i>, which is under review by the
+                    Journal of Herpetology as of September 2019.</p>
+                <p>I used the AcuityView program in R (along with Gimp editing software) to produce the figures,
+                    which can be viewed toward the bottom of the document below. I developed a working knowledge
+                    of the R language while learning to use this program. More information about AcuityView can be
+                    found <a href="https://eleanorcaves.weebly.com/acuityview-software.html">here.</a></p>
+                <iframe
+                    width="80%"
+                    height="800px"
+                    src="https://docs.google.com/document/d/e/2PACX-1vQirphRe5tYechlsrC-plaKXsXcChl0DEPJtbcd84OV5y4vKzuOhqZw9yLkHsYBIvRzXTU5pJs0WkWFnWsOhd8/pub?embedded=true"></iframe>
+            </div>
         </div>
     }
 }
@@ -366,8 +391,14 @@ class AcuityView extends React.Component {
 class BulletGame extends React.Component {
     render() {
         return <div className="container">
-            <iframe src="https://giphy.com/embed/H5HHoJ6o9fsMbIyX0i" width="480" height="300" frameBorder="0"
-                    className="giphy-embed" allowFullScreen></iframe>
+            <h2>Bullet Game</h2>
+            <p>I created this small game as an assignment for Fundamentals of Computer Science II along with
+                team partner Nicole Danuwidjaja. The game implements the concepts of linked-list structures and
+                dynamic dispatch to track collisions and maintain state.</p>
+
+            <p>Please <Link to='/contact'>contact me </Link> for access to the GitHub repository for this program.</p>
+
+            <img src="https://media.giphy.com/media/H5HHoJ6o9fsMbIyX0i/source.gif"></img>
         </div>
     }
 }
