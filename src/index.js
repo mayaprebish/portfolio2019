@@ -566,7 +566,6 @@ class Header extends React.Component {
                             <p className="lead">I am a second year CS student at Northeastern University's Khoury
                                 College of Computer Sciences looking to expand my knowledge of the field and
                                 gain experience, especially in software engineering and web development.</p>
-                            <p className="lead"> Please note this site is a work in progress as of October 2019.</p>
                         </div>
                         <div className="col">
                         </div>
