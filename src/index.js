@@ -528,7 +528,7 @@ class Contact extends React.Component {
                     <div>
                         <p style={liStyle}><b>LinkedIn:</b>&nbsp;
                             <a style={liStyle} target="_blank"
-                               href="https://www.linkedin.com/in/maya-prebish-24b146194">Maya Prebish</a>
+                               href="https://www.linkedin.com/in/maya-prebish">Maya Prebish</a>
                         </p>
                     </div>
                     <i className="fa fa-linkedin-square" style={iconStyle}></i>
