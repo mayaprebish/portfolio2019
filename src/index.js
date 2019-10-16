@@ -152,24 +152,16 @@ class About extends React.Component {
                 className="nav"
                 style={{marginTop: '200px'}}>
                 <div className="container">
-                    <p
-                        className="float-right"
-                        style={
-                            {
-                                fontSize: 14
-                            }
-                        }>Image sources:&nbsp;
+                    <p className="float-right"
+                        style={{fontSize: 14}}>Image sources:&nbsp;
                         <a href="https://i2.wp.com/cornellsun.com/wp-content/uploads/2017/01/alabama-shakes.jpg?fit=600%2C600">Sound
                             & Color, </a>
-                        <a
-                            href="https://thehub.musiciansfriend.com/images/interviews/Courtney-Barnett-Header.jpg"> Courtney
-                            Barnett,
-                        </a>
+                        <a href="https://thehub.musiciansfriend.com/images/interviews/Courtney-Barnett-Header.jpg"> Courtney
+                            Barnett, </a>
                         <a href="https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/11/link-zelda-1200x600.png">Legend
                             of Zelda, </a>
                         <a href="https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/Northeastern_University_seal.svg/1200px-Northeastern_University_seal.svg.png">
-                            Northeastern Logo
-                        </a>
+                            Northeastern Logo</a>
                     </p>
                 </div>
             </footer>
@@ -555,7 +547,7 @@ class Resume extends React.Component {
             <div className="container-fluid">
                 <img
                     src="https://live.staticflickr.com/65535/48873516518_017d939083_o.jpg"
-                    width="80%"
+                    width="90%"
                     alt="Maya Prebish - Resume"/>
             </div>
         </div>
