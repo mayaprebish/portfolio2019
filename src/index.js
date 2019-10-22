@@ -10,6 +10,11 @@ const Button = window.React.Button;
 const Overlay = window.React.Overlay;
 const $ = window.jQuery;
 
+/**
+ * Single page React app which renders each component underneath the header.
+ * Not yet optimized for mobile viewing as of October 2019.
+ * Created for use with Github Pages.
+ */
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -36,6 +41,60 @@ class App extends React.Component {
     }
 }
 
+/**
+ * Header component: renders name and description above other content using a Bootstrap jumbotron element.
+ */
+class Header extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return <div className="header">
+            <div className="jumbotron jumbotron-fluid bg-dark" style={jumboStyle}>
+                <div className="container">
+
+                    <h1 className="display-4">Maya Prebish</h1>
+
+                    <div className="row">
+                        <div className="col">
+                            <p className="lead">I am a second year CS student at Northeastern University's Khoury
+                                College of Computer Sciences looking to expand my knowledge of the field and
+                                gain experience, especially in software engineering and web development.</p>
+                        </div>
+                        <div className="col">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav className="navbar navbar-expand-lg navbar-light bg-light" style={navbarStyle}>
+                <div className="container">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link to='/portfolio' className='nav-link'>Portfolio</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/about' className='nav-link'>About</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/contact' className='nav-link'>Contact</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to='/resume' className='nav-link'>Resume</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+        </div>
+    }
+}
+
+/**
+ * Interactive/dynamic component used to render Portfolio descriptions.
+ * Properties: title, body, and image source.
+ */
 class Card extends React.Component {
     constructor(props) {
         super(props);
@@ -70,7 +129,7 @@ class Card extends React.Component {
 }
 
 /**
- * About page. Static. Includes photos and paragraphs.
+ * About page.
  */
 class About extends React.Component {
     constructor(props) {
@@ -179,6 +238,9 @@ class About extends React.Component {
     }
 }
 
+/**
+ * Portfolio page container. Renders multiple Cards to display portfolio information.
+ */
 class Portfolio extends React.Component {
     constructor(props) {
         super(props);
@@ -189,6 +251,9 @@ class Portfolio extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col">
+                        /**
+                        * Card 1: This site
+                        */
                         <Card title="Portfolio site" body={
                             <div>
                                 <div className="row">
@@ -209,6 +274,9 @@ class Portfolio extends React.Component {
                         }
                         />
 
+                        /**
+                        * Card 2: Bullets Game
+                        */
                         <Card title="Bullets" body={
                             <div>
                                 <div className="row">
@@ -225,6 +293,9 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
+                        /**
+                        * Card 3: Minesweeper
+                        */
                         <Card title="Minesweeper" body={
                             <div>
                                 <div className="row">
@@ -241,6 +312,9 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
+                        /**
+                        * Card 4: ExCellence app
+                        */
                         <Card title="ExCellence" body={
                             <div>
                                 <div className="row">
@@ -258,6 +332,9 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
+                        /**
+                        * Card 5: MATLAB program
+                        */
                         <Card title="MATLAB" body={
                             <div>
                                 <div className="row">
@@ -274,6 +351,9 @@ class Portfolio extends React.Component {
                             </div>}
                         />
 
+                        /**
+                        * Card 6: AcuityView Figures
+                        */
                         <Card title="AcuityView" body={
                             <div>
                                 <div className="row">
@@ -301,6 +381,10 @@ class Portfolio extends React.Component {
     }
 }
 
+/**
+ * A component for the buttons rendered inside of a Card. The alert property contains a message which displays when the
+ * second button is clicked - this is used for the portfolio entries with private github repositories.
+ */
 class Buttons extends React.Component {
     constructor(props) {
         super(props);
@@ -342,6 +426,9 @@ class Buttons extends React.Component {
     }
 }
 
+/**
+ * A component that renders a given message.
+ */
 class Alert extends React.Component {
     constructor(props) {
         super(props);
@@ -357,6 +444,9 @@ class Alert extends React.Component {
     }
 }
 
+/**
+ * Page component for details about the MATLAB project.
+ */
 class MatLab extends React.Component {
     render() {
         return <div>
@@ -373,7 +463,7 @@ class MatLab extends React.Component {
                 <div className="row">
                     <div className="col">
                         <img src="https://media.giphy.com/media/JNOUPvQtrgE7kP2gd1/source.gif" width="100%"
-                             frameBorder="0"></img>
+    frameBorder="0"/>
                     </div>
 
                     <div className="col">
@@ -385,6 +475,9 @@ class MatLab extends React.Component {
     }
 }
 
+/**
+ * Page component for details about the ExCellence project.
+ */
 class Excellence extends React.Component {
     render() {
         return <div>
@@ -460,6 +553,9 @@ class Excellence extends React.Component {
     }
 }
 
+/**
+ * Page component for details about the Minesweeper project.
+ */
 class Minesweeper extends React.Component {
     render() {
         return <div>
@@ -476,6 +572,9 @@ class Minesweeper extends React.Component {
     }
 }
 
+/**
+ * Page component for details about the AcuityView project.
+ */
 class AcuityView extends React.Component {
     render() {
         return <div>
@@ -491,12 +590,15 @@ class AcuityView extends React.Component {
                 <iframe
                     width="80%"
                     height="800px"
-                    src="https://docs.google.com/document/d/e/2PACX-1vQirphRe5tYechlsrC-plaKXsXcChl0DEPJtbcd84OV5y4vKzuOhqZw9yLkHsYBIvRzXTU5pJs0WkWFnWsOhd8/pub?embedded=true"></iframe>
+                    src="https://docs.google.com/document/d/e/2PACX-1vQirphRe5tYechlsrC-plaKXsXcChl0DEPJtbcd84OV5y4vKzuOhqZw9yLkHsYBIvRzXTU5pJs0WkWFnWsOhd8/pub?embedded=true"/>
             </div>
         </div>
     }
 }
 
+/**
+ * Page component for details about the Bullet Game project.
+ */
 class BulletGame extends React.Component {
     render() {
         return <div className="container">
@@ -507,16 +609,15 @@ class BulletGame extends React.Component {
 
             <p>Please <Link to='/contact'>contact me </Link> for access to the GitHub repository for this program.</p>
 
-            <img src="https://media.giphy.com/media/H5HHoJ6o9fsMbIyX0i/source.gif"></img>
+            <img src="https://media.giphy.com/media/H5HHoJ6o9fsMbIyX0i/source.gif"/>
         </div>
     }
 }
 
+/**
+ * Page component containing contact information.
+ */
 class Contact extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return <div className="container">
             <ul className="list-group" style={listStyle}>
@@ -524,7 +625,7 @@ class Contact extends React.Component {
                     <div>
                         <p style={liStyle}><b>Email:</b> prebish.m@husky.neu.edu</p>
                     </div>
-                    <i className="fa fa-envelope" style={iconStyle}></i>
+                    <i className="fa fa-envelope" style={iconStyle}/>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center">
                     <div>
@@ -533,18 +634,17 @@ class Contact extends React.Component {
                                href="https://www.linkedin.com/in/maya-prebish">Maya Prebish</a>
                         </p>
                     </div>
-                    <i className="fa fa-linkedin-square" style={iconStyle}></i>
+                    <i className="fa fa-linkedin-square" style={iconStyle}/>
                 </li>
             </ul>
         </div>
     }
 }
 
+/**
+ * Page component containing Resume information.
+ */
 class Resume extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return <div className="container">
             <a target="_blank"
@@ -564,104 +664,60 @@ class Resume extends React.Component {
     }
 }
 
-class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return <div className="header">
-            <div className="jumbotron jumbotron-fluid bg-dark" style={jumboStyle}>
-                <div className="container">
-
-                    <h1 className="display-4">Maya Prebish</h1>
-
-                    <div className="row">
-                        <div className="col">
-                            <p className="lead">I am a second year CS student at Northeastern University's Khoury
-                                College of Computer Sciences looking to expand my knowledge of the field and
-                                gain experience, especially in software engineering and web development.</p>
-                        </div>
-                        <div className="col">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <nav className="navbar navbar-expand-lg navbar-light bg-light" style={navbarStyle}>
-                <div className="container">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <Link to='/portfolio' className='nav-link'>Portfolio</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to='/about' className='nav-link'>About</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to='/contact' className='nav-link'>Contact</Link>
-                        </li>
-                        <li className="nav-item">
-                            <Link to='/resume' className='nav-link'>Resume</Link>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>
-    }
-}
-
+/**
+ * Some style constants used throughout React code.
+ */
 const jumboStyle = {
     padding: '20px',
     margin: '0px',
     color: 'white'
-}
+};
 
 const navbarStyle = {
     paddingLeft: '0px'
-}
+};
 
 const buttonStyle = {
     marginTop: '20px',
-}
+};
 
 const iconStyle = {
     margin: '0px',
     padding: '0px'
-}
+};
 
 const cardStyle = {
     marginTop: '20px',
     marginBottom: '20px'
-}
+};
 
 const liStyle = {
     marginTop: '0px',
     marginBottom: '0px'
-}
+};
 
 const listStyle = {
     marginTop: '20px'
-}
+};
 
 const titleStyle = {
     marginTop: '0px',
     paddingTop: '0px,',
     marginLeft: '5px'
-}
+};
 
 const buttonRowStyle = {
     marginLeft: '10px',
     marginBottom: '10px'
-}
+};
 
 const bodyTextStyle = {
     marginLeft: '10px'
-}
+};
 
 const alignRight = {
     marginLeft: '10px'
-}
+};
 
 ReactDOM.render(
     <App/>,
