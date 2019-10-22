@@ -160,24 +160,24 @@ class About extends React.Component {
                             in
                             environments where I'm immersed in topics that are brand new to me. The primary traits I
                             have to offer in a professional environment are my ability to communicate, my ability to
-                            work independently, and my consistency and attention to detail.</p>
+                            work independently, my consistency and my attention to detail.</p>
                     </div>
                 </div>
                 <div className="row abt-div" style={listStyle}>
-                    <div className="col-8 text-right">
+                    <div className="col-4">
+                        <img src="https://live.staticflickr.com/65535/48883505998_cd7d028f9b_o.png"
+                             alt="about photo"
+                             width="100%"
+                             className="photo"/>
+                    </div>
+                    <div className="col-8 text-justify">
                         <h3>Academics</h3>
                         <p>GPA: 3.0/4</p>
                         <p>Relevant Coursework: Web Development*, Algorithms & Data*, Computer Systems*,
                             Object-Oriented
                             Design, Discrete Structures, Fundamentals of Computer Science, Calculus 1 & 2&nbsp;
                             <i>(*Currently Enrolled)</i></p>
-                        <p>*Unofficial transcript available upon request</p>
-                    </div>
-                    <div className="col-4">
-                        <img src="https://live.staticflickr.com/65535/48883505998_cd7d028f9b_o.png"
-                             alt="about photo"
-                             width="100%"
-                             className="photo"/>
+                        <p><i>Unofficial transcript available upon request</i></p>
                     </div>
                 </div>
                 <div className="row abt-div" style={listStyle}>
@@ -206,11 +206,14 @@ class About extends React.Component {
                             of people and places from my life. I hope to be a skilled digital artist at some point
                             in the future.</p>
 
-                        <p>Finally, as someone who grew up in a decade defined by internet culture and rapid technological
+                        <p>Finally, as someone who grew up in a decade defined by internet culture and rapid
+                            technological
                             advancement, one of my biggest fascinations is
-                           learning where and how everything began. Most of the books I read relate to the origins of modern
-                           computing, and it's one of the most fascinating aspects of recent history to me. One of my
-                           goals is to not only be a part of the progression of modern computing, but to also deeply
+                            learning where and how everything began. Most of the books I read relate to the origins of
+                            modern
+                            computing, and it's one of the most fascinating aspects of recent history to me. My goal is
+                            to
+                            not only be a part of the progression of modern computing, but to also deeply
                             understand its origins and how we got to where we are today.</p>
                     </div>
 
@@ -222,7 +225,7 @@ class About extends React.Component {
                 style={{marginTop: '200px'}}>
                 <div className="container">
                     <p className="float-right"
-                        style={{fontSize: 14}}>Image sources:&nbsp;
+                       style={{fontSize: 14}}>Image sources:&nbsp;
                         <a href="https://i2.wp.com/cornellsun.com/wp-content/uploads/2017/01/alabama-shakes.jpg?fit=600%2C600">Sound
                             & Color, </a>
                         <a href="https://thehub.musiciansfriend.com/images/interviews/Courtney-Barnett-Header.jpg"> Courtney
@@ -251,9 +254,6 @@ class Portfolio extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        /**
-                        * Card 1: This site
-                        */
                         <Card title="Portfolio site" body={
                             <div>
                                 <div className="row">
@@ -274,9 +274,6 @@ class Portfolio extends React.Component {
                         }
                         />
 
-                        /**
-                        * Card 2: Bullets Game
-                        */
                         <Card title="Bullets" body={
                             <div>
                                 <div className="row">
@@ -293,9 +290,6 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
-                        /**
-                        * Card 3: Minesweeper
-                        */
                         <Card title="Minesweeper" body={
                             <div>
                                 <div className="row">
@@ -312,9 +306,6 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
-                        /**
-                        * Card 4: ExCellence app
-                        */
                         <Card title="ExCellence" body={
                             <div>
                                 <div className="row">
@@ -332,9 +323,6 @@ class Portfolio extends React.Component {
                             </div>
                         }/>
 
-                        /**
-                        * Card 5: MATLAB program
-                        */
                         <Card title="MATLAB" body={
                             <div>
                                 <div className="row">
@@ -351,9 +339,6 @@ class Portfolio extends React.Component {
                             </div>}
                         />
 
-                        /**
-                        * Card 6: AcuityView Figures
-                        */
                         <Card title="AcuityView" body={
                             <div>
                                 <div className="row">
@@ -463,7 +448,7 @@ class MatLab extends React.Component {
                 <div className="row">
                     <div className="col">
                         <img src="https://media.giphy.com/media/JNOUPvQtrgE7kP2gd1/source.gif" width="100%"
-    frameBorder="0"/>
+                             frameBorder="0"/>
                     </div>
 
                     <div className="col">
@@ -621,15 +606,15 @@ class Contact extends React.Component {
     render() {
         return <div className="container">
             <ul className="list-group" style={listStyle}>
-                <li className="list-group-item d-flex justify-content-between align-items-center vertical-align-center">
+                <li className="list-group-item d-flex justify-content-between align-items-center vertical-align-center contact-item">
                     <div>
-                        <p style={liStyle}><b>Email:</b> prebish.m@husky.neu.edu</p>
+                        <p style={liStyle}>Email: prebish.m@husky.neu.edu</p>
                     </div>
                     <i className="fa fa-envelope" style={iconStyle}/>
                 </li>
-                <li className="list-group-item d-flex justify-content-between align-items-center">
+                <li className="list-group-item d-flex justify-content-between align-items-center contact-item">
                     <div>
-                        <p style={liStyle}><b>LinkedIn:</b>&nbsp;
+                        <p style={liStyle}>LinkedIn:&nbsp;
                             <a style={liStyle} target="_blank"
                                href="https://www.linkedin.com/in/maya-prebish">Maya Prebish</a>
                         </p>
@@ -647,19 +632,31 @@ class Contact extends React.Component {
 class Resume extends React.Component {
     render() {
         return <div className="container">
-            <a target="_blank"
-               href="https://docs.google.com/document/d/1NQcSp1peqMEnJ2zk0xbswHT1uhnCitKlUpvXvwyN304/edit?usp=sharing">
-                <button className="btn btn-secondary"
-                        style={buttonStyle}>View on Google Drive
-                </button>
-            </a>
-
-            <div className="container-fluid">
-                <img
-                    src="https://live.staticflickr.com/65535/48873516518_017d939083_o.jpg"
-                    width="90%"
-                    alt="Maya Prebish - Resume"/>
-            </div>
+            <ul className="list-group" style={listStyle}>
+                <li className="list-group-item
+                d-flex justify-content-between
+                align-items-center vertical-align-center
+                resume-item">
+                    <div>
+                        <p style={liStyle}>
+                            <a target="_blank"
+                               href="https://docs.google.com/document/d/1NQcSp1peqMEnJ2zk0xbswHT1uhnCitKlUpvXvwyN304/edit?usp=sharing">
+                                View/Download on Google Drive
+                            </a></p>
+                    </div>
+                    <i className="fa fa-google" style={iconStyle}/>
+                </li>
+                <li className="list-group-item d-flex
+                justify-content-between align-items-center
+                resume-item">
+                    <div>
+                        <img
+                            src="https://live.staticflickr.com/65535/48873516518_017d939083_o.jpg"
+                            width="100%"
+                            alt="Maya Prebish - Resume"/>
+                    </div>
+                </li>
+            </ul>
         </div>
     }
 }
@@ -719,6 +716,9 @@ const alignRight = {
     marginLeft: '10px'
 };
 
+/**
+ * Code to render the SPA within root element of index.html.
+ */
 ReactDOM.render(
     <App/>,
     document.getElementById('root')
