@@ -15,8 +15,26 @@
     color: gray;
 }
 
-.photo {
-    border-radius: 10%;
+.abt-div {
+    color: darkgray;
+    padding: 20px;
+    transition: color 1s, padding 1s;
+}
+
+.abt-div:hover {
+    color: gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.abt-div .photo {
+    border-radius: 50%;
+    width: 90%;
+    transition: width 1s;
+}
+
+.abt-div:hover .photo {
+    width: 100%;
 }
 
 body {

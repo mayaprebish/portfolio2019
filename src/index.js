@@ -69,6 +69,9 @@ class Card extends React.Component {
     }
 }
 
+/**
+ * About page. Static. Includes photos and paragraphs.
+ */
 class About extends React.Component {
     constructor(props) {
         super(props);
@@ -77,7 +80,7 @@ class About extends React.Component {
     render() {
         return <div>
             <div className="container">
-                <div className="row" style={listStyle}>
+                <div className="row abt-div" style={listStyle}>
                     <div className="col-4">
                         <img src="https://live.staticflickr.com/65535/48882028043_081b73c769_o.jpg"
                              alt="about photo"
@@ -101,7 +104,7 @@ class About extends React.Component {
                             work independently, and my consistency and attention to detail.</p>
                     </div>
                 </div>
-                <div className="row" style={listStyle}>
+                <div className="row abt-div" style={listStyle}>
                     <div className="col-8 text-right">
                         <h3>Academics</h3>
                         <p>GPA: 3.0/4</p>
@@ -118,8 +121,8 @@ class About extends React.Component {
                              className="photo"/>
                     </div>
                 </div>
-                <div className="row" style={listStyle}>
-                    <div className="col-4 text-justify">
+                <div className="row abt-div" style={listStyle}>
+                    <div className="col-4">
                         <img src="https://live.staticflickr.com/65535/48882240643_bdcf5595cd_o.png"
                              alt="about photo"
                              width="100%"
@@ -143,6 +146,13 @@ class About extends React.Component {
                         <p>I'm also interested in digital art. I've always liked to draw, and I like making sketches
                             of people and places from my life. I hope to be a skilled digital artist at some point
                             in the future.</p>
+
+                        <p>Finally, as someone who grew up in a decade defined by internet culture and rapid technological
+                            advancement, one of my biggest fascinations is
+                           learning where and how everything began. Most of the books I read relate to the origins of modern
+                           computing, and it's one of the most fascinating aspects of recent history to me. One of my
+                           goals is to not only be a part of the progression of modern computing, but to also deeply
+                            understand its origins and how we got to where we are today.</p>
                     </div>
 
                 </div>
