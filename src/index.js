@@ -191,30 +191,22 @@ class About extends React.Component {
                         <h3>Interests</h3>
 
                         <p>Outside of school, my biggest passion is music. My instruments of choice are guitar, bass
-                            and drums, and I played in bands throughout high school.</p>
+                            and drums, and I played in bands throughout high school. I'm also interested in traditional
+                            and digital art/design, I love to draw, and I have a good eye for aesthetics.</p>
 
                         <p>My next favorite activity is gaming. I like to stay updated on the gaming industry and
-                            I've
-                            dabbled in videogame programming in and out of school. My favorite genres are RPG games
-                            (Skyrim,
-                            Fable, Fire Emblem), puzzle/adventure games (Legend of Zelda, Pokemon) and
-                            casual/relaxing
-                            games
-                            (Animal Crossing, Stardew Valley).</p>
-
-                        <p>I'm also interested in digital art. I've always liked to draw, and I like making sketches
-                            of people and places from my life. I hope to be a skilled digital artist at some point
-                            in the future.</p>
+                            I've dabbled in game programming in and out of school. My favorite genres are RPG games
+                            (Skyrim, Fable, Fire Emblem), puzzle/adventure games (Legend of Zelda, Pokemon) and
+                            casual/relaxing games (Animal Crossing, Stardew Valley).</p>
 
                         <p>Finally, as someone who grew up in a decade defined by internet culture and rapid
-                            technological
-                            advancement, one of my biggest fascinations is
+                            technological advancement, one of my biggest fascinations is
                             learning where and how everything began. Most of the books I read relate to the origins of
-                            modern
-                            computing, and it's one of the most fascinating aspects of recent history to me. My goal is
-                            to
-                            not only be a part of the progression of modern computing, but to also deeply
-                            understand its origins and how we got to where we are today.</p>
+                            modern computing, and it's one of the most fascinating aspects of recent history to me. My
+                            goal is to not only be a part of the progression of modern computing, but to also deeply
+                            understand its origins and how we got to where we are today. I'm always looking to learn more
+                            about all aspects of computer programming and engineering, and everything new I learn helps
+                            me to become a more well-rounded student of my field.</p>
                     </div>
 
                 </div>
@@ -239,6 +231,32 @@ class About extends React.Component {
             </footer>
         </div>
     }
+}
+
+class Slides extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+render() {
+        return <div id="carouselExampleSlidesOnly" className="carousel slide photo" data-ride="carousel">
+            <div className="carousel-inner">
+                <div className="carousel-item active">
+                    <img src={this.props.src1} className="d-block w-100"/>
+                </div>
+                <div className="carousel-item">
+                    <img src={this.props.src2} className="d-block w-100"/>
+                </div>
+                <div className="carousel-item">
+                    <img src={this.props.src3} className="d-block w-100"/>
+                </div>
+                <div className="carousel-item">
+                    <img src={this.props.src4} className="d-block w-100"/>
+                </div>
+            </div>
+        </div>
+    }
+
 }
 
 /**
