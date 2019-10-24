@@ -183,13 +183,9 @@ class About extends React.Component {
                 <div className="row abt-div" style={listStyle}>
                     <div className="col-4">
                         <MultiPhoto src1="https://live.staticflickr.com/65535/48948444128_ff245bd9c0_o.png"
-                                    src2="https://live.staticflickr.com/65535/48949190332_713b6731bd_o.png"
-                                    src3="https://live.staticflickr.com/65535/48948853676_538b049021_o.png"
-                                    src4="https://live.staticflickr.com/65535/48949035882_5f2302a141_o.png"/>
-                        {/*<img src="https://live.staticflickr.com/65535/48882240643_bdcf5595cd_o.png"*/}
-                        {/*     alt="about photo"*/}
-                        {/*     width="100%"*/}
-                        {/*     className="photo"/>*/}
+                                    src2="https://live.staticflickr.com/65535/48949035882_5f2302a141_o.png"
+                                    src3="https://live.staticflickr.com/65535/48949190332_713b6731bd_o.png"
+                                    src4="https://live.staticflickr.com/65535/48948853676_538b049021_o.png"/>
                     </div>
                     <div className="col-8 text-justify">
                         <h3>Interests</h3>
@@ -244,7 +240,7 @@ class MultiPhoto extends React.Component {
 
     render() {
         return <div className="multi-photo">
-            <img src={this.props.src1} className="multi-item"/>
+            <img src={this.props.src1} className="multi-item-active"/>
             <img src={this.props.src2} className="multi-item"/>
             <img src={this.props.src3} className="multi-item"/>
             <img src={this.props.src4} className="multi-item"/>

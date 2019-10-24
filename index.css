@@ -43,15 +43,29 @@ CSS stylesheet for index.
     opacity: 1;
 }
 
+.abt-div .multi-item-active {
+    border-radius: 50%;
+    width: 50%;
+    transition: width 1s, opacity 1s;
+    opacity: 0.8;
+}
+
+.abt-div:hover .multi-item-active {
+    position: relative;
+    width: 100%;
+    opacity: 1;
+}
+
 .abt-div .multi-item {
     border-radius: 50%;
-    width: 90%;
+    width: 50%;
     transition: width 1s, opacity 1s;
     opacity: 0.8;
 }
 
 .abt-div:hover .multi-item {
-    width: 100%;
+    position: relative;
+    width: 33%;
     opacity: 1;
 }
 
