@@ -182,10 +182,14 @@ class About extends React.Component {
                 </div>
                 <div className="row abt-div" style={listStyle}>
                     <div className="col-4">
-                        <img src="https://live.staticflickr.com/65535/48882240643_bdcf5595cd_o.png"
-                             alt="about photo"
-                             width="100%"
-                             className="photo"/>
+                        <MultiPhoto src1="https://live.staticflickr.com/65535/48948444128_ff245bd9c0_o.png"
+                                    src2="https://live.staticflickr.com/65535/48949190332_713b6731bd_o.png"
+                                    src3="https://live.staticflickr.com/65535/48948853676_538b049021_o.png"
+                                    src4="https://live.staticflickr.com/65535/48949035882_5f2302a141_o.png"/>
+                        {/*<img src="https://live.staticflickr.com/65535/48882240643_bdcf5595cd_o.png"*/}
+                        {/*     alt="about photo"*/}
+                        {/*     width="100%"*/}
+                        {/*     className="photo"/>*/}
                     </div>
                     <div className="col-8 text-justify">
                         <h3>Interests</h3>
@@ -233,27 +237,17 @@ class About extends React.Component {
     }
 }
 
-class Slides extends React.Component {
+class MultiPhoto extends React.Component {
     constructor(props) {
         super(props);
     }
 
 render() {
-        return <div id="carouselExampleSlidesOnly" className="carousel slide photo" data-ride="carousel">
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src={this.props.src1} className="d-block w-100"/>
-                </div>
-                <div className="carousel-item">
-                    <img src={this.props.src2} className="d-block w-100"/>
-                </div>
-                <div className="carousel-item">
-                    <img src={this.props.src3} className="d-block w-100"/>
-                </div>
-                <div className="carousel-item">
-                    <img src={this.props.src4} className="d-block w-100"/>
-                </div>
-            </div>
+        return <div className="multi-photo">
+                    <img src={this.props.src1} className="multi-item"/>
+                    <img src={this.props.src2} className="multi-item"/>
+                    <img src={this.props.src3} className="multi-item"/>
+                    <img src={this.props.src4} className="multi-item"/>
         </div>
     }
 
@@ -733,6 +727,10 @@ const bodyTextStyle = {
 const alignRight = {
     marginLeft: '10px'
 };
+
+const multiStyle = {
+    padding: '0px'
+}
 
 /**
  * Code to render the SPA within root element of index.html.

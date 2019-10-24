@@ -43,6 +43,18 @@ CSS stylesheet for index.
     opacity: 1;
 }
 
+.abt-div .multi-item {
+    border-radius: 50%;
+    width: 90%;
+    transition: width 1s, opacity 1s;
+    opacity: 0.8;
+}
+
+.abt-div:hover .multi-item {
+    width: 100%;
+    opacity: 1;
+}
+
 .contact-item {
     color: darkgray;
     transition: color 0.5s;
