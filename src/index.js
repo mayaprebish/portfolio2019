@@ -242,12 +242,12 @@ class MultiPhoto extends React.Component {
         super(props);
     }
 
-render() {
+    render() {
         return <div className="multi-photo">
-                    <img src={this.props.src1} className="multi-item"/>
-                    <img src={this.props.src2} className="multi-item"/>
-                    <img src={this.props.src3} className="multi-item"/>
-                    <img src={this.props.src4} className="multi-item"/>
+            <img src={this.props.src1} className="multi-item"/>
+            <img src={this.props.src2} className="multi-item"/>
+            <img src={this.props.src3} className="multi-item"/>
+            <img src={this.props.src4} className="multi-item"/>
         </div>
     }
 
