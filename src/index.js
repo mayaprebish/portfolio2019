@@ -183,8 +183,8 @@ class About extends React.Component {
                 <div className="row abt-div" style={listStyle}>
                     <div className="col-4">
                         <MultiPhoto src1="https://live.staticflickr.com/65535/48948444128_ff245bd9c0_o.png"
-                                    src2="https://live.staticflickr.com/65535/48949035882_5f2302a141_o.png"
-                                    src3="https://live.staticflickr.com/65535/48949190332_713b6731bd_o.png"
+                                    src2="https://live.staticflickr.com/65535/48949190332_713b6731bd_o.png"
+                                    src3="https://live.staticflickr.com/65535/48949035882_5f2302a141_o.png"
                                     src4="https://live.staticflickr.com/65535/48948853676_538b049021_o.png"/>
                     </div>
                     <div className="col-8 text-justify">
@@ -204,7 +204,8 @@ class About extends React.Component {
                             learning where and how everything began. Most of the books I read relate to the origins of
                             modern computing, and it's one of the most fascinating aspects of recent history to me. My
                             goal is to not only be a part of the progression of modern computing, but to also deeply
-                            understand its origins and how we got to where we are today. I'm always looking to learn more
+                            understand its origins and how we got to where we are today. I'm always looking to learn
+                            more
                             about all aspects of computer programming and engineering, and everything new I learn helps
                             me to become a more well-rounded student of my field.</p>
                     </div>
@@ -270,7 +271,7 @@ class Portfolio extends React.Component {
                                 </div>
                                 <div className="row">
                                     <a target="_blank"
-                                       href="https://github.com/mayaprebish/mayaprebish.github.io">
+                                       href="https://github.com/mayaprebish/portfolio2019">
                                         <button style={buttonRowStyle}
                                                 type="button"
                                                 className="btn btn-secondary">
