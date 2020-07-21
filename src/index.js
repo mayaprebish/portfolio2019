@@ -617,7 +617,7 @@ class Contact extends React.Component {
             <ul className="list-group" style={listStyle}>
                 <li className="list-group-item d-flex justify-content-between align-items-center vertical-align-center contact-item">
                     <div>
-                        <p style={liStyle}>Email: prebish.m@husky.neu.edu</p>
+                        <a href = "mailto: prebish.m@northeastern.edu" style={liStyle}>Email: prebish.m@northeastern.edu</a>
                     </div>
                     <i className="fa fa-envelope" style={iconStyle}/>
                 </li>
